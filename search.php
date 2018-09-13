@@ -1,34 +1,30 @@
 <?php include("includes/header.php"); ?>
 <?php 
 
+
+// $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
+
+// $items_per_page = 1;
+// // $items_total_count = Photo::count_all();
+
+
+// $items_total_count = Photo::find_pattern($search);
+
+
+
+// $paginate = new Paginate($page, $items_per_page, $items_total_count);
+
+
+// $sql = "SELECT * FROM photos ";
+// $sql .= "LIMIT {$items_per_page} ";
+// $sql .= "OFFSET {$paginate->offset()}";
+
+
 if (isset($_POST['cari'])) {
     $search = $_POST['search'];
 }
 
-
-$page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
-
-$items_per_page = 1;
-// $items_total_count = Photo::count_all();
-
-
-$items_total_count = Photo::find_pattern($search);
-
-
-
-$paginate = new Paginate($page, $items_per_page, $items_total_count);
-
-
-$sql = "SELECT * FROM photos ";
-$sql .= "LIMIT {$items_per_page} ";
-$sql .= "OFFSET {$paginate->offset()}";
-
-
-// if (isset($_POST['cari'])) {
-//     $search = $_POST['search'];
-// }
-
-// $photos = Photo::find_pattern($search);
+$photos = Photo::find_pattern($search);
 
 
 
