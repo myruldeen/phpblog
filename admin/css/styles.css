@@ -1,0 +1,10 @@
+.user_image {
+	width: 62px;
+	height: 62px;
+
+}
+
+.user_image_round {
+	border-radius: 50%;
+}
+
