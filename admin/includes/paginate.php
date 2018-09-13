@@ -3,7 +3,7 @@
 
 class Paginate {
 
-
+	//set properties
 	public $current_page;
 	public $items_per_page;
 	public $items_total_count;
@@ -18,18 +18,19 @@ class Paginate {
 
 	}
 
-
+	//next method increment value
 	public function next() {
 
 		return $this->current_page + 1;
 	}
 
-
+	//previous method decrement value
 	public function previous() {
 
 		return $this->current_page - 1;
 	}
 
+	//total page method count all page
 	public function total_page() {
 
 		return ceil($this->items_total_count/$this->items_per_page);
