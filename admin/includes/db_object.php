@@ -47,7 +47,8 @@ public $upload_errors_array = array(
 		}
 
 	}
-
+	
+	//find all query method...
 	public static function find_all() {
 
 		return static::find_by_query("SELECT * FROM " . static::$db_table . " ");
