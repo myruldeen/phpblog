@@ -9,7 +9,7 @@ class Paginate {
 	public $items_total_count;
 
 
-
+	//set constructor....
 	public function __construct($page, $items_per_page, $items_total_count) {
 
 		$this->current_page = (int)$page;
